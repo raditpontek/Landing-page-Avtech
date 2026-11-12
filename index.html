@@ -1,31 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avtech - 2</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>AVTECH — Outdoor Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="index2.html" class="navbar-logo">Avtech</a>
-            <button class="navbar-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="navbar-menu">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">About Avtect</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Search</a></li>
-            </ul>
-        </div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="AVTECH home">
+      <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
+      <span>AVTECH</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+      <a class="nav-link active" href="#home">Home <span class="chevron">⌄</span></a>
+      <a class="nav-link" href="#products">Product <span class="chevron">⌄</span></a>
+      <a class="nav-link mobile-only" href="#categories">Categories</a>
+      <a class="nav-link mobile-only" href="#footer">Contact</a>
     </nav>
 
-    <script src="script.js"></script>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" type="button" aria-label="Cari"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m16 16 5 5"/></svg></button>
+      <button class="icon-button" type="button" aria-label="Keranjang"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1.2"/><circle cx="18" cy="20" r="1.2"/></svg></button>
+      <button class="icon-button" type="button" aria-label="Akun"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="9" r="3"/><path d="M6.8 18a5.8 5.8 0 0 1 10.4 0"/></svg></button>
+    </div>
+    <form class="search-panel" role="search">
+      <input type="search" placeholder="Cari produk..." aria-label="Cari produk">
+      <button type="submit">Cari</button>
+    </form>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section class="hero-section" id="home">
+      <div class="hero-banner">
+        <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=1800&q=85" alt="Suasana berkemah di alam terbuka">
+        <div class="hero-shade"></div>
+        <button class="hero-arrow prev" type="button" aria-label="Slide sebelumnya">‹</button>
+        <div class="hero-copy">
+          <p class="eyebrow">EXPLORE THE OUTDOORS</p>
+          <h1>Bushcraft</h1>
+          <p class="quote">“The man, who goes afoot, prepared to camp anywhere and in any weather, is the most independent fellow on earth.”</p>
+          <span class="quote-author">Dave Canterbury</span>
+        </div>
+        <button class="hero-arrow next" type="button" aria-label="Slide berikutnya">›</button>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PRODUCTS + CATEGORIES -->
+    <section class="shopping-section" id="products">
+      <div class="section-inner">
+        <div class="section-heading">
+          <h2>Trendy Product</h2>
+          <div class="category-tabs" role="group" aria-label="Filter produk">
+            <button class="tab active" data-filter="all" type="button">All</button>
+            <button class="tab" data-filter="headwear" type="button">Headwear</button>
+            <button class="tab" data-filter="apparels" type="button">Apparels</button>
+            <button class="tab" data-filter="backpack" type="button">Backpack</button>
+          </div>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" data-category="accessories">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=700&q=85" alt="Dompet outdoor warna gelap"></div>
+            <h3>Avtech Salvator Wallet</h3><p>Rp. 107.000</p>
+          </article>
+          <article class="product-card" data-category="apparels">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=700&q=85" alt="Kemeja outdoor biru"></div>
+            <h3>Avtech Boyka Shirt</h3><p>Rp. 225.000</p>
+          </article>
+          <article class="product-card" data-category="backpack">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1622260614153-03223fb72052?auto=format&fit=crop&w=700&q=85" alt="Tas backpack outdoor"></div>
+            <h3>Avtech Daypack Ninox</h3><p>Rp. 197.000</p>
+          </article>
+          <article class="product-card" data-category="headwear">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=700&q=85" alt="Topi baseball hitam"></div>
+            <h3>Avtech Snapback Cap Rock Mountain</h3><p>Rp. 147.000</p>
+          </article>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="section-heading categories-heading" id="categories">
+          <h2>Shop by Categories</h2>
+        </div>
+        <div class="category-grid">
+          <a class="category-tile backpack-tile" href="#products">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1000&q=85" alt="Pendaki membawa backpack">
+            <span>Backpack</span>
+          </a>
+          <div class="category-stack">
+            <a class="category-tile headwear-tile" href="#products">
+              <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=85" alt="Topi outdoor">
+              <span>Headwear</span>
+            </a>
+            <a class="category-tile accessories-tile" href="#products">
+              <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=85" alt="Aksesori outdoor">
+              <span>Accessories</span>
+            </a>
+          </div>
+          <a class="category-tile apparels-tile" href="#products">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=85" alt="Pakaian untuk aktivitas luar ruang">
+            <span>Apparels</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 3: PROMO + FOOTER -->
+  <section class="signup-strip">
+    <div class="signup-content">
+      <div><h2>Sign Up &amp; Get 10% Off</h2><p>Avtech present the best in mountain equipment</p></div>
+      <a href="#footer" class="signup-button">SIGN UP <span>→</span></a>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="#"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span>AVTECH</span></a>
+        <p>Avtech Indonesia<br>Jl. Raya Setu No.26, RT.5/RW.1, Setu<br>Kec. Cipayung, Kota Jakarta Timur,<br>Daerah Khusus Ibukota Jakarta 13880<br>email : support@avtech-indo.com<br>000 000 0000</p>
+      </div>
+      <div><h3>Avtech Indonesia</h3><ul><li><a href="#">About Us</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Official Marketplace</a></li><li><a href="#">Official Store</a></li><li><a href="#">Whatsapp Order</a></li></ul></div>
+      <div><h3>My Account</h3><ul><li><a href="#">Login</a></li><li><a href="#">Register</a></li><li><a href="#">My Orders</a></li></ul></div>
+    </div>
+    <div class="copyright">© Copyright 2026 Avtech. All Rights Reserved</div>
+  </footer>
+
+  <div class="menu-backdrop"></div>
+  <script src="script.js"></script>
 </body>
 </html>
