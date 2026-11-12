@@ -60,7 +60,8 @@ body{
     white-space: nowrap;
 }
 
-.navbar-container .navbar-menu li a:hover {
+.navbar-container .navbar-menu li a:hover,
+.navbar-container .navbar-menu li a.active{
     color: #162530;
     background: rgb(222, 222, 222);
     border: 2px solid #000;
@@ -123,4 +124,17 @@ body{
     }    
 }
 
-@media (max-width: 450px )
+@media (max-width: 450px ) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-logo{
+        font-size: 1.7rem;
+    }
+
+    .navbar-container .navbar-menu li a {
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
+}
